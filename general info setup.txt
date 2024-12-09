@@ -1,0 +1,51 @@
+3/12/2024
+within cmd
+C:\Users\Prasada\flask_python project>conda activate codify
+
+(codify) C:\Users\Prasada\flask_python project>
+
+for shortcuts using conda: https://www.youtube.com/watch?v=qI3P7zMMsgY 
+
+In VS code
+create new file called test.py 
+Inside test.py type in print ("Hello world") and this is where you have a choice 
+* easier way press play 
+
+what python interpreator go to ctrl+shift+p I have chosen 
+
+python 3.9.20(codify') ~.....  Conda
+
+* complex way go to the terminal 
+
+***********************************
+installing requirements 
+cmd pip3 install flask
+
+if you type in: pip freeze                            you can view what has been installed
+To stop the flask app running ctrl+C
+
+Return to VS code; in our py file 
+
+Renamed from test.py to hello.py
+from flask import Flask , render_template 
+app= Flask(__name__) note it requires two underscores    we are creating a flask instance helps flask find all its files directories 
+
+ To keep flask running in our cmd **********************
+#server to run flask properly
+# set FLASK_APP=hello.py
+# set FLASK_ENV=development
+# set FLASK_DEBUG=1 to automatically load after any changes
+#flask run
+
+This sectin should always go at the bottom of the flask py file
+if __name__ == "__main__":
+   app.run(debug=True)
+
+These were all the requirements i used previously: 
+from flask import Flask, render_template 
+from flask_sqlalchemy import SQLAlchemy
+from datetime import datetime
+from flask_wtf import FlaskForm 
+from wtforms.validators import DataRequired
+from wtforms import StringField, SubmitField
+
